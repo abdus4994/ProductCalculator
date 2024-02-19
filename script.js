@@ -22,7 +22,7 @@ function reset(){
 
 function display1(){
    $("#btn-position").html(`
-   <div id="btn-totalQty" class="row text-center">
+   <div id="btn-totalQty" class="row text-center bg-danger">
    <div>
        <button class="btn m-2 px-3 fs-4 btn-primary" onclick="digit(7)">7</button>
        <button class="btn m-2 px-3 fs-4 btn-primary" onclick="digit(8)">8</button>
@@ -39,10 +39,8 @@ function display1(){
        <button class="btn m-2 px-3 fs-4 btn-primary" onclick="digit(3)">3</button>
    </div>
    <div>
-   
-   <button class="btn m-2 px-3 fs-4 btn-primary" onclick="digit(0)">0</button>
-   
-</div>
+   <button class="btn m-2 px-3 fs-4 btn-primary" onclick="digit(0)">0</button>   
+    </div>
  </div>
 
    `)
@@ -50,7 +48,7 @@ function display1(){
 
 function display2(){
     $("#btn-position").html(`
-    <div id="btn-totalQty" class="row text-center">
+    <div id="btn-totalQty" class="row text-center bg-danger">
     <div>
         <button class="btn m-2 px-3 fs-4 btn-primary" onclick="insertNumber(7)">7</button>
         <button class="btn m-2 px-3 fs-4 btn-primary" onclick="insertNumber(8)">8</button>
