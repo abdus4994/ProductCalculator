@@ -15,7 +15,7 @@ function reset(){
     let ctnPerPcs = $("#ctnPerPcs").val(" ");
     let carton = $("#carton").text("0");
     let pcs = $("#pcs").text("0");
-    display1();
+    display1()
    
 };
 
