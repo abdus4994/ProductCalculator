@@ -14,8 +14,10 @@ function reset(){
     let totalQty = $("#totalQty").val(" ");
     let ctnPerPcs = $("#ctnPerPcs").val(" ");
     let carton = $("#carton").text("0");
-    let pcs = $("#pcs").text("0");
+    let pcs = $("#pcs").text("0");    
     display1()
+    deleteNumberCtn()
+    
    
 };
 
@@ -39,8 +41,11 @@ function display1(){
        <button class="btn m-2 px-3 fs-4 btn-primary" onclick="digit(3)">3</button>
    </div>
    <div>
-   <button class="btn m-2 px-3 fs-4 btn-primary" onclick="digit(0)">0</button>   
-    </div>
+   
+   <button class="btn m-2 px-3 fs-4 btn-primary" onclick="digit(0)">0</button>
+   <button class="btn m-2 px-3 fs-4 btn-danger" onclick="deleteNumberCtn()">DEL</button>
+   
+</div>
  </div>
 
    `)
@@ -67,6 +72,7 @@ function display2(){
     <div>
     
         <button class="btn m-2 px-3 fs-4 btn-primary" onclick="insertNumber(0)">0</button>    
+        <button class="btn m-2 px-3 fs-4 btn-danger" onclick="deleteNumberPcs()">DEL</button>    
     </div>
   </div>
  
@@ -83,4 +89,16 @@ function display2(){
         $("#ctnPerPcs").val(existingNumber + value); 
         
     }
- 
+ function deleteNumberCtn() {
+    var deleteValue = $("#totalQty").val();
+    if(deleteValue!=''){
+        $("#totalQty").val(deleteValue.slice(0,-1));
+    }
+ }
+
+ function deleteNumberPcs() {
+    var deleteValue = $("#ctnPerPcs").val();
+    if(deleteValue!=''){
+        $("#ctnPerPcs").val(deleteValue.slice(0,-1));
+    }
+ }
