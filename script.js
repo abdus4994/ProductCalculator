@@ -17,8 +17,7 @@ function reset(){
     let pcs = $("#pcs").text("0");    
     display1()
     deleteNumberCtn()
-    
-   
+    deleteNumberPcs()
 };
 
 
